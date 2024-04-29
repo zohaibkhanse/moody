@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moody Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script type="module" src="./src/js/controler.js"></script>
+  </head>
+  <body>
+    <header class="log-in-page__header"> 
+        <h1 class="log-in-page__logo" id="logo" >Moody</h1>
+        <button class="btn btn--primary" id="log-in-view__log-out-btn">Log out</button>
+    </header>
+    
+    <div class="log-in-page">
+      <form class="log-in-page__sign-in-view" id="form-1">
+          <div class="container log-in-page--container">
+          <h1 class="log-in-page__sign-in-view-title title">Log in</h1>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Write your email"
+          />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Write your password"
+            />
+          <button type="submit" class="btn btn--sign-in btn--primary" id="log-in">
+            Sign In
+          </button>
+          <button class="btn btn--sign-up btn--primary" id="sign-up-view">
+            Sign Up
+          </button>
+             </div>
+        </form>
+
+    </div>
+    <div class="input-message message hide-message"></div>
+  </body>
+</html>

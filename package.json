@@ -1,0 +1,22 @@
+{
+  "name": "moody-project",
+  "version": "1.0.0",
+  "description": "portfolio project",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build  index.html"
+  },
+ 
+  "author": "ZOHAIB KHAN",
+  "license": "ISC",
+
+  "keywords": [],
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "core-js": "^3.36.0",
+    "fractional": "^1.0.0",
+    "regenerator-runtime": "^0.14.1"
+  }
+}

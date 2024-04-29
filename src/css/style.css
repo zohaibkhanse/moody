@@ -1,0 +1,344 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark: #2c2c2b;
+  --dark-bg: #2c2c2bb9;
+  --light1: #fff;
+  --light2: #c7c7c7;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--light1);
+  line-height: 1.4;
+  background: linear-gradient(-45deg, #2c2c2c63 20%, #c7c7c7c0),
+    url("../image/moody-bg2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* img {
+  width: 100%;
+  height: auto;
+  display: block;
+} */
+/* ==============================================
+// BUTTONS
+===================================================*/
+.btn {
+  padding: 12px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+}
+.btn--log-in {
+  margin-top: 1rem;
+}
+.btn--primary,
+.user-profile-page__post-btn {
+  background-color: var(--light2);
+  border: 5px outset #d4d4d4;
+  cursor: pointer;
+}
+.btn--primary:hover {
+  background-color: var(--dark);
+  color: var(--light1);
+}
+.user-profile-page__post-btn {
+  width: 100%;
+}
+
+/* Post Buttons */
+.btn--post {
+  width: 60px;
+  bottom: 3px;
+  left: 10px;
+  padding: 4px;
+  font-size: 14px;
+  color: var(--light1);
+  background-color: #2c2c2b;
+  margin-right: 8px;
+}
+.btn--post:hover,
+.btn--post:focus {
+  background-color: var(--light2);
+  color: var(--dark);
+}
+
+/* =======================================
+// Generic Classes
+======================================*/
+.title {
+  text-align: center;
+  text-transform: uppercase;
+}
+.post-message {
+  background-color: var(--dark-bg);
+  padding: 3rem;
+  line-height: 1.6;
+}
+.post-container-spinner {
+  background-color: var(--dark-bg);
+}
+.post-date {
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.post-user-info {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--light2);
+}
+.post-user-info img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hidden {
+  display: none;
+}
+/* //////////////////////////////////////////////// */
+
+.sign-in-view__info {
+  margin-top: 2rem;
+  color: var(--light1);
+}
+
+label {
+  color: var(--light1);
+  font-weight: 200;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+input {
+  padding: 1rem;
+  background: transparent;
+  border: 1px solid var(--light1);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--light1);
+  outline: none;
+}
+a {
+  color: var(--light1);
+  text-decoration: none;
+}
+
+/* //=======================
+// Messages
+==============================*/
+.error-message {
+  color: rgb(255, 179, 225);
+  font-size: 14px;
+}
+.message {
+  background-color: rgb(52, 39, 128);
+  color: var(--light1);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  transform: translateX(-30%);
+  transition: transform 250ms linear;
+  max-width: 300px;
+  text-align: center;
+  line-height: 1.6;
+}
+.hide-message {
+  transform: translateX(100%);
+}
+/* //===========================
+// Spinner
+==================================*/
+svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--light1);
+  animation: rotater 2s infinite linear;
+}
+.spinner {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes rotater {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ///////////////////////////////////////////////////////
+//  Log IN page Styles
+ /////////////////////////////////////////////////////// */
+.log-in-page--container {
+  background-color: var(--dark-bg);
+  box-shadow: 1px 1px 8px var(--light1);
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column;
+  row-gap: 1rem;
+}
+
+.log-in-page {
+  padding: 1rem;
+}
+.log-in-page__header {
+  background-color: var(--dark-bg);
+  margin-bottom: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.log-in-page__logo {
+  color: var(--light1);
+  text-shadow: 3px 2px var(--dark);
+}
+
+/* ======================= */
+
+#log-in-view {
+  margin: 1rem;
+}
+.user-profile-page__user-profile {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.user-profile-page__user-image {
+  max-width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 1.3rem;
+  border: 10px solid var(--dark-bg);
+}
+.user-profile-page__user-name {
+  background-color: var(--light2);
+  padding: 0.7rem 2rem;
+  color: var(--dark);
+  transform: skew(-15deg, 0);
+}
+.user-profile-page__posts-container {
+  /* background-color: var(--dark-bg); */
+  margin-top: 2rem;
+  overflow-y: scroll;
+  /* padding: 2rem 1rem; */
+  max-height: 100vh;
+}
+.user-profile-page__post-text-area {
+  width: 100%;
+  resize: vertical;
+  padding: 1rem;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  color: var(--light1);
+  outline: none;
+  border: 5px outset #d4d4d4;
+  background-color: var(--dark-bg);
+  margin-bottom: 1rem;
+}
+.user-profile-page__post {
+  background-color: var(--dark-bg);
+  position: relative;
+  border: 1px solid var(--light2);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.user-profile-page__post-paragraph {
+  margin-bottom: 1rem;
+}
+
+/* //==============================
+// Public Posts Page
+=====================================*/
+.public-posts-page {
+  max-width: 700px;
+  margin: auto;
+}
+/* //////////////////////
+// Layouts
+////////////////////////////////*/
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ///////////////////////////////////////////////
+// Layout
+///////////////////////////////////////////*/
+
+@media screen and (min-width: 460px) {
+  .log-in-page--container {
+    max-width: 500px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .log-in-page--container {
+    max-width: 500px;
+  }
+
+  .user-profile-page--container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "profile profile"
+      "textAreaAndBtn post"
+      "btn post";
+    column-gap: 2rem;
+  }
+
+  .user-profile-page__user-profile {
+    grid-area: profile;
+  }
+  .user-profile-page__post-btn {
+    align-self: start;
+    justify-self: start;
+  }
+  .user-profile-page__textArea-and-btn {
+    grid-area: textAreaAndBtn;
+    align-self: start;
+    justify-self: start;
+  }
+  .user-profile-page__posts-container {
+    grid-area: post;
+    align-self: start;
+    margin-top: 0;
+  }
+  .user-profile-page__post {
+    align-self: start;
+  }
+}
